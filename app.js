@@ -3,14 +3,13 @@ const hourEl = document.getElementById('hour');
 const minuteEl = document.getElementById('minute');
 const secondEl = document.getElementById('second');
 
-const newYearDate = new Date("January 1, 2023 00:00:00").getTime();
+let newYearDate = new Date("January 1, 2023 00:00:00").getTime();
 
 updateCountdown();
 
 function updateCountdown(){
-    let now = new Date().getTime();
-    let gap = newYearDate - now
-    // console.log(gap);
+    let currentTime = new Date().getTime();
+    let gap = newYearDate - currentTime;
     let second = 1000;
     let minute = second * 60;
     let hour = minute * 60;
